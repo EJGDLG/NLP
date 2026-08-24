@@ -243,6 +243,96 @@ def comparar_busquedas(
     print()
 
 
+def similitud_coseno(embedding_consulta: np.ndarray, embeddings_corpus: np.ndarray) -> np.ndarray:
+    return embeddings_corpus @ embedding_consulta
+
+def buscar_semanticamente(
+    consulta: str,
+    corpus: list[str],
+    embeddings_corpus: np.ndarray,
+    modelo,
+    top_k: int = 3,
+) -> list[dict]:
+    embedding_consulta = generar_embeddings(modelo, [consulta])[0]
+    puntajes = similitud_coseno(embedding_consulta, embeddings_corpus)
+
+    indices_ordenados = np.argsort(puntajes)[::-1][:top_k]
+
+    resultados = []
+    for posicion, indice in enumerate(indices_ordenados, start=1):
+        resultados.append({
+            "rank": posicion,
+            "indice": int(indice),
+            "texto": corpus[indice],
+            "score": float(puntajes[indice]),
+        })
+
+    return resultados
+def tokenizar_simple(texto: str) -> set[str]:
+    return set(re.findall(r"\b\w+\b", texto.lower()))
+
+def buscar_por_palabras_clave(consulta: str, corpus: list[str], top_k: int = 3) -> list[dict]:
+    tokens_consulta = tokenizar_simple(consulta)
+    resultados = []
+
+    for indice, texto in enumerate(corpus):
+        tokens_texto = tokenizar_simple(texto)
+        coincidencias = tokens_consulta.intersection(tokens_texto)
+        score = len(coincidencias)
+
+        resultados.append({
+            "indice": indice,
+            "texto": texto,
+            "score": score,
+            "coincidencias": sorted(coincidencias),
+        })
+
+    resultados.sort(key=lambda item: item["score"], reverse=True)
+    return resultados[:top_k]
+def imprimir_resultados_semanticos(consulta: str, resultados: Iterable[dict]) -> None:
+    print("\nBusqueda semantica")
+    for resultado in resultados:
+        print(
+            f"  {resultado['rank']}. "
+            f"score={resultado['score']:.4f} | "
+            f"{resultado['texto']}"
+        )
+
+def imprimir_resultados_keyword(consulta: str, resultados: Iterable[dict]) -> None:
+    print("\nBusqueda por palabras clave")
+    for posicion, resultado in enumerate(resultados, start=1):
+        coincidencias = ", ".join(resultado["coincidencias"]) or "sin coincidencias"
+        print(
+            f"  {posicion}. "
+            f"score={resultado['score']} | "
+            f"coincidencias={coincidencias} | "
+            f"{resultado['texto']}"
+        )
+
+def comparar_busquedas(
+    consulta: str,
+    corpus: list[str],
+    embeddings_corpus: np.ndarray,
+    modelo,
+    top_k: int = 3,
+) -> None:
+    print("=" * 100)
+    print(f"CONSULTA: {consulta}")
+    print("=" * 100)
+
+    resultados_semanticos = buscar_semanticamente(
+        consulta=consulta,
+        corpus=corpus,
+        embeddings_corpus=embeddings_corpus,
+        modelo=modelo,
+        top_k=top_k,
+    )
+    resultados_keyword = buscar_por_palabras_clave(consulta, corpus, top_k=top_k)
+
+    imprimir_resultados_semanticos(consulta, resultados_semanticos)
+    imprimir_resultados_keyword(consulta, resultados_keyword)
+    print()
+
 # -----------------------------------------------------------------------------
 # 7. Analisis (respuestas del estudiante)
 # -----------------------------------------------------------------------------
