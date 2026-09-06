@@ -1,0 +1,70 @@
+CORPUS: La Metamorfosis — Franz Kafka
+Traducción de dominio público (Wikisource). Fragmento: dos páginas consecutivas seleccionadas del inicio de la obra.
+--------------------------------------------------------------------------------
+
+[PÁGINA 1]
+
+Cuando Gregorio Samsa se despertó una mañana después de un sueño intranquilo, se
+encontró sobre su cama convertido en un monstruoso insecto. Estaba tumbado sobre
+su espalda dura, y en forma de caparazón y, al levantar un poco la cabeza, veía un
+vientre abombado, parduzco, dividido por partes duras en forma de arco, sobre cuya
+prominencia apenas podía mantenerse el cobertor, a punto ya de resbalar al suelo.
+Sus muchas patas, ridículamente pequeñas en comparación con el resto de su tamaño,
+le vibraban desamparadas ante los ojos.
+
+«¿Qué me ha ocurrido?», pensó. No era un sueño. Su habitación, una auténtica
+habitación humana, si bien algo pequeña, permanecía tranquila entre las cuatro
+paredes harto conocidas. Por encima de la mesa, sobre la que se encontraba
+desparramado un muestrario de paños desempaquetado —Samsa era viajante de
+comercio—, estaba colgado aquel cuadro que hacía poco había recortado de una
+revista ilustrada y había colocado en un bonito marco dorado. Representaba a una
+dama ataviada con un sombrero y una boa de piel, que estaba allí sentada muy
+erguida y levantaba hacia el observador un pesado manguito de piel en el que había
+desaparecido su antebrazo por completo.
+
+La mirada de Gregorio se dirigió después hacia la ventana, y el tiempo lluvioso
+—se oían caer las gotas de lluvia sobre la chapa del alféizar— lo puso muy
+melancólico. «¿Qué tal si sigo durmiendo un poco y me olvido de todas estas
+tonterías?», pensó; pero esto era algo absolutamente imposible, pues estaba
+acostumbrado a dormir del lado derecho y en su actual estado no podía adoptar esa
+posición. Por más fuerza con que se lanzara hacia el lado derecho, siempre volvía a
+quedar boca arriba. Lo intentó cien veces, cerrando los ojos para no tener que ver
+aquellas patas que pataleaban, y solo cejó en su empeño cuando comenzó a notar en
+el costado un dolorcillo leve y sordo que antes nunca había sentido.
+
+[PÁGINA 2]
+
+«¡Ay, Dios!», pensó. «¡Qué cansada es la profesión que he elegido! Un día sí y otro
+también de viaje. Las preocupaciones profesionales son mucho mayores que en el
+trabajo de la propia casa, y por si fuera poco me toca cargar con esta plaga de los
+viajes: la angustia de los enlaces de tren, la comida mala e irregular, un trato con
+gente siempre cambiante, nunca duradero, que jamás llega a ser cordial. ¡Que el
+diablo se lleve todo esto!». Sintió una ligera picazón en el vientre; se deslizó
+lentamente sobre la espalda acercándose a la cabecera de la cama para poder
+levantar mejor la cabeza; se encontró con que el sitio que le picaba estaba
+totalmente cubierto de unos puntitos blancos, cuya naturaleza no comprendió, y
+quiso palpar el lugar con una pata, pero la retiró enseguida, porque el roce le
+producía escalofríos.
+
+Volvió a deslizarse a su posición inicial. «Esto de levantarse tan temprano»,
+pensó, «lo vuelve a uno completamente idiota. El hombre tiene que dormir lo suyo.
+Otros viajantes viven como pachás. Cuando vuelvo a la pensión durante la mañana
+para pasar a limpio los pedidos conseguidos, esos señores todavía están
+desayunando. Eso podría intentar yo con mi jefe; entonces me pondría de patitas en
+la calle. Aunque, quién sabe, a lo mejor sería lo mejor para mí. Si no fuera por mis
+padres, ya me habría despedido hace tiempo; me habría presentado ante el jefe y le
+habría dicho lo que pienso con toda mi alma. ¡Se habría caído del escritorio!».
+
+Y cuando dieron las seis y cuarto se oyó que llamaban cautelosamente a la puerta
+que había junto a la cabecera de su cama. «Gregorio», oyó que decían —era su
+madre—, «son las seis y cuarto. ¿No tenías que salir de viaje?». ¡Aquella voz
+suave! Gregorio se horrorizó al oír la suya propia al contestar: era, sin duda
+alguna, su antigua voz, pero a ella se mezclaba, como surgido de lo más hondo, un
+doloroso y apagado pitido, que solo en el primer momento dejaba salir las palabras
+con claridad, para luego destruir su resonancia de tal modo que uno no sabía si
+había oído bien.
+
+--------------------------------------------------------------------------------
+NOTA: Si tu profesor exige DOS páginas exactas de una edición concreta, sustituye
+este texto por las páginas que te tocaron al azar. El notebook funciona con
+cualquier texto que pegues en la variable `paginas`.
